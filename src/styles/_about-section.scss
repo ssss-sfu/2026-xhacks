@@ -1,0 +1,96 @@
+@import "./tokens.scss";
+@import "./about-anim.scss";
+
+#about-section,
+#ssss-section {
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    background-color: $color-text-light-heading;
+    font-size: 1.8rem;
+  }
+  .ssss-img {
+    min-width: 50%;
+    border-radius: 1em;
+  }
+
+  br {
+    padding: 0;
+    margin: 0;
+  }
+
+  #about-image {
+    max-width: min(33em, 100vw);
+    margin-left: -10%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.5rem, 3vw, 3rem);
+
+  .icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3dvw;
+    margin-left: 3dvw;
+    gap: 2rem;
+    text-align: center;
+    @include viewport(mobile) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .icon-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding: 4em 0 2em 0;
+    gap: 1em;
+    width: fit-content;
+  }
+
+  @include viewport(desktop) {
+    flex-direction: row;
+  }
+}
+
+@include viewport(desktop) {
+  #about-section article {
+    order: 1;
+  }
+}
+
+@include viewport(tablet) {
+  #about-section,
+  #ssss-section {
+    h2 {
+      text-align: left;
+    }
+    .ssss-img {
+      width: 90%;
+    }
+  }
+}
+@include viewport(mobile) {
+  #about-section,
+  #ssss-section {
+    h2 {
+      text-align: left;
+    }
+    h3 {
+      font-size: 1em;
+    }
+    .ssss-img {
+      width: 90%;
+    }
+    .icon-container {
+      img {
+        width: 70%;
+      }
+    }
+  }
+}

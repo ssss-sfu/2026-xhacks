@@ -1,0 +1,92 @@
+/*
+  Colours
+*/
+
+$color-background: #22192F;;
+$color-background-footer: linear-gradient(180deg, #22192F 45%, #1d1d46 98.63%);
+$color-background-button: #7db6a4;
+
+$color-text: #fff;
+$color-text-heading: #fb9bb2;
+$color-text-heading-fallback: #FFEEC6;
+
+$color-text-light-heading: #E4F7F3;
+$color-text-subheading: #FFEEC6;
+$color-gradient-start: #E4F7F3;
+$color-gradient-end: #fb9bb2;
+
+
+/*
+  Typography
+*/
+@font-face {
+  font-family: "DM Sans";
+  src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+$text-size: clamp(1rem, 2vw, 1.25rem);
+$text-size-h1: clamp(2.5rem, 8vw, 5.94rem);
+$text-size-h2: clamp(1.6rem, 6vw, 3.3rem);
+$text-size-h3: clamp(1.4rem, 5vw, 2.5rem);
+$text-size-button: clamp(1.25rem, 4vw, 2rem);
+
+/*
+  Media Queries
+*/
+$container-max-width: 1500px;
+$gutter: 1.75rem;
+
+$tablet-min-width: 768px;
+$desktop-min-width: 1025px;
+
+@mixin viewport($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: ($tablet-min-width - 1)) {
+      @content;
+    }
+  } @else if $media == mobile-tablet {
+    @media only screen and (max-width: ($desktop-min-width - 1)) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $tablet-min-width) and (max-width: ($desktop-min-width - 1)) {
+      @content;
+    }
+  } @else if $media == tablet-desktop {
+    @media only screen and (min-width: $tablet-min-width) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media only screen and (min-width: $desktop-min-width) {
+      @content;
+    }
+  }
+}
+
+/*
+  Animation
+*/
+$transition-speed-fast: 0.2s;
+$easing-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(254, 235, 186, 1));
+  }
+  50% {
+    opacity: 0.875;
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+};

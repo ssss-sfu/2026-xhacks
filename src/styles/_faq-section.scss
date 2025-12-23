@@ -1,0 +1,122 @@
+@import "tokens.scss";
+
+#faq {
+  #faq-container {
+    display: flex;
+    flex-direction: column;
+
+    & > img {
+      max-width: 45%;
+      width: 30em;
+      height: 50em;
+
+      @include viewport(tablet) {
+        display: none;
+      }
+
+      @include viewport(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  .list {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2.75rem;
+
+    @include viewport(desktop) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .faq-item {
+      position: relative;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 66.15%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      border-radius: 2rem;
+      width: fit-content;
+      height: fit-content;
+
+      @include viewport(tablet-desktop) {
+        margin-left: 7rem;
+      }
+
+      input {
+        display: none;
+      }
+
+      label {
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 700;
+        transition: color 0.25s;
+        padding: 2rem;
+
+        img {
+          transform: rotate(-90deg);
+          filter: saturate(0) brightness(2);
+          transition: all 0.25s;
+          width: 1em;
+        }
+      }
+
+      .content {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-bottom: 2rem;
+
+        overflow: hidden;
+        max-height: 0vh;
+        padding-bottom: 0;
+        transition: max-height 0.5s, padding-bottom 0.5s;
+      }
+
+      & > img {
+        position: absolute;
+        filter: saturate(0) brightness(2);
+        left: -7rem;
+        top: 0;
+        transition: all 0.25s;
+        display: none;
+        width: 5.5em;
+
+        @include viewport(tablet-desktop) {
+          display: block;
+        }
+      }
+
+      input:checked {
+        & ~ label {
+          color: $color-text-heading-fallback;
+        }
+
+        & ~ label img {
+          filter: saturate(1);
+          transform: rotate(0deg);
+        }
+
+        & ~ .content {
+          max-height: 100vh;
+          padding-bottom: 2rem;
+        }
+
+        & ~ img {
+          filter: saturate(1);
+        }
+
+      }
+    }
+  }
+
+  #faq-img {
+    width: 20em;
+    margin: auto;
+  }
+}
