@@ -1,12 +1,21 @@
 @import 'tokens.scss';
 
 html {
-    background: $color-background;
-    scroll-behavior: smooth;
+  //background: $color-background;
+  scroll-behavior: smooth;
 }
+
+body{
+  background-image: url('./assets/images/bg.png');
+  background-size:cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .container {
   max-width: $container-max-width;
-  padding: clamp(1rem, 7vw, 12rem);
+  padding: clamp(1rem, 5vw, 8rem);
   margin: auto;
   color: $color-text;
 

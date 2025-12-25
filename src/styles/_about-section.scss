@@ -8,7 +8,6 @@
   }
 
   h3 {
-    background-color: $color-text-light-heading;
     font-size: 1.8rem;
   }
   .ssss-img {
@@ -22,8 +21,8 @@
   }
 
   #about-image {
-    max-width: min(33em, 100vw);
-    margin-left: -10%;
+    max-width: min(38em, 100vw);
+    margin-left: 0%;
   }
 
   display: flex;
@@ -51,6 +50,25 @@
     padding: 4em 0 2em 0;
     gap: 1em;
     width: fit-content;
+    color: $color-icons;
+    transition: transform .2s; 
+    img{
+      width: 120px;
+      height:auto;
+    }
+    &:hover {
+      transform: scale(1.1);    
+    }
+  }
+
+  .mail-stack-container img {
+    width: 200px;
+    height: auto;
+    rotate: 10deg;
+    transition: transform .2s; 
+    &:hover {
+      transform: scale(1.1);    
+    }
   }
 
   @include viewport(desktop) {
@@ -89,8 +107,11 @@
     }
     .icon-container {
       img {
-        width: 70%;
+        width: 60px;
       }
+    }
+    .mail-stack-container img {
+      width: 60px;
     }
   }
 }

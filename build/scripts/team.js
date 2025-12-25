@@ -1,19 +1,19 @@
 const execArray = [
-  { name: "Mekdim Dereje", role: "President" },
-  { name: "Randy Le Tran", role: "Vice President" },
-  { name: "Max Zhang", role: "Secretary" },
-  { name: "Andrew La Grange", role: "Treasurer" },
-  { name: "Ethan Chou", role: "Director of Marketing" },
-  { name: "Jennifer Huang", role: "Director of Activities" },
-  { name: "Dagem Dereje", role: "Director of Activities" },
-  { name: "Maria León Campos", role: "Director of Visual Design" },
-  { name: "Damon Yiu", role: "External Representative" },
-  { name: "Ash Aung", role: "Internal Representative" },
-  { name: "Julie Wu", role: "Third Year Representative" },
-  { name: "Jaycie Say", role: "Second Year Representative" },
-  { name: "Aleeza Ahmed", role: "First Year Representative" },
-  { name: "Swara Bhate", role: "First Year Representative" },
-  { name: "Fabian Jonathan Siswanto", role: "SFSS Council Representative" }
+  { name: "Ash Aung", role: "Co-President" },
+  { name: "Jaycie Say", role: "Co-President" },
+  { name: "Jennifer Huang", role: "Secretary" },
+  { name: "Brandon Nishaan Chattha", role: "Treasurer" },
+  { name: "Andrew La Grange", role: "Director of Activities" },
+  { name: "Noah Zakaib", role: "Director of Activities" },
+  { name: "Maria León Campos", role: "Director of Marketing" },
+  { name: "An Nguyen", role: "Director of Visual Design" },
+  { name: "Meyer Kaur Sarna", role: "External Representative" },
+  { name: "Philip Ho", role: "Internal Representative" },
+  { name: "Mehar Saini", role: "Upper Division Representative" },
+  { name: "Aleeza Ahmed", role: "Lower Division Representative" },
+  { name: "Courtney Lung", role: "First Year Representative" },
+  { name: "Manpreet Singh Parmar", role: "First Year Representative" },
+  { name: "Matthew Philip Widjaja", role: "SFSS Council Representative" }
 ]
 
 

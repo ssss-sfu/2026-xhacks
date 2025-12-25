@@ -6,10 +6,11 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100dvh;
+  height: 80dvh;
   max-height: 1024px;
+  padding-top: 12rem;
   @include viewport(mobile) {
-    height: 80dvh;
+    height: 60dvh;
   }
   .intro-image-container {
     position: relative;
@@ -19,15 +20,6 @@
     align-items: center;
 
     // Gradient
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      #ab7779 9%,
-      #8c5a66 41%,
-      #34233b 74.5%,
-      #22192F 94.5%,
-      rgba(255, 255, 255, 0) 100%
-
-    );
     img:nth-of-type(1) {
       z-index: 1;
     }
@@ -55,7 +47,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 1.4em;
+  font-size: 1em;
   gap: 2rem;
 
   h1 {
@@ -69,7 +61,7 @@
     -webkit-text-fill-color: unset;
     -moz-background-clip: unset;
     -moz-text-fill-color: unset;
-    margin-bottom: 2.81rem;
+    //margin-bottom: 2.81rem;
   }
 
   a {
@@ -78,11 +70,17 @@
   }
 
   p {
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: clamp(22rem, 45vw, 50rem);
+    
+    @include viewport(mobile) {
+      max-width: 100%;
+    }
   }
 
   .medium {
     font-weight: 600;
+    color: $color-text-subheading;
   }
 
   img#hero-image {
@@ -99,10 +97,10 @@
 
   @include viewport(tablet-desktop) {
     h1 {
-      font-size: 3.5em;
+      font-size: 3em;
     }
     h3 {
-      font-size: 1.8em;
+      font-size: 1.5em;
     }
     img#hero-image {
       width: min(25em, 50vw);
@@ -144,6 +142,15 @@
       @include viewport(tablet) {
         margin-right: -15.5%;
       }
+    }
+  }
+
+  .handbook-link{
+    color: $color-text-subheading;
+    text-decoration: underline;
+    transition: color $transition-speed-fast ease;
+    &:hover {
+      color: $color-text-heading;
     }
   }
 }

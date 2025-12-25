@@ -32,6 +32,9 @@
         object-fit: cover;
         filter: grayscale(100%);
         transition: filter 0.25s ease-in-out;
+        &:hover {
+          transform: scale(1.1);    
+        }
       }
 
       .exec-desc-1, .exec-desc-2 {

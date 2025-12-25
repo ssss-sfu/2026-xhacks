@@ -2,6 +2,8 @@ let prevScrollpos = window.pageYOffset;
 let header = document.querySelector(".header")
 // const nav = document.querySelector(".nav");
 
+const isMobile = () => window.innerWidth <= 768;
+
 let scrollYValue = 80;
 window.onscroll = () => {
 //   nav.style.display = "none";

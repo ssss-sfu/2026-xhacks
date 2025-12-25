@@ -4,17 +4,18 @@
 
 $color-background: #22192F;;
 $color-background-footer: linear-gradient(180deg, #22192F 45%, #1d1d46 98.63%);
-$color-background-button: #7db6a4;
+$color-background-button: #D0DF8F;
 
-$color-text: #fff;
-$color-text-heading: #fb9bb2;
-$color-text-heading-fallback: #FFEEC6;
+$color-text: #5E5C56;
+$color-text-heading: #C58D29 ;
+$color-text-heading-fallback: #E17071;
 
 $color-text-light-heading: #E4F7F3;
-$color-text-subheading: #FFEEC6;
+$color-text-subheading: #5E5C56;
 $color-gradient-start: #E4F7F3;
-$color-gradient-end: #fb9bb2;
+$color-icons: #C58D29 ;
 
+$color-hourglass-bg: #E3CFAB;
 
 /*
   Typography
@@ -77,16 +78,3 @@ $desktop-min-width: 1025px;
 */
 $transition-speed-fast: 0.2s;
 $easing-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 1;
-    filter: drop-shadow(0 0 4px rgba(254, 235, 186, 1));
-  }
-  50% {
-    opacity: 0.875;
-    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
-  }
-};

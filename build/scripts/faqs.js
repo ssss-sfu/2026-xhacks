@@ -1,18 +1,18 @@
 const faqsJson = [
   {
-    question: "Why DreamHacks?",
+    question: "Why XHacks?",
     answer: 
-      "If you can dream it, you can do it - or in this case, build it at DreamHacks! This year is centered around building anything your heart may desire. If you have a project that you have been wanting to create for the longest time, or a project that will help you actually achieve your dreams—the possibilities are endless! This is your opportunity to express any creative vision you have or transform those ideas into the reality that you have been dying to do for the longest time."
+      "The past is more than just memory. Without it, there is no foundation for the future. At XHacks 2026, we invite hackers to bridge the gap between the past, present, and future. Whether you are rebuilding old technology with modern stacks, reviving lost stories, or creating retro-futuristic interfaces, this is your chance to connect with history and grow further to build the future. We will travel back in time to draw inspiration from our roots and honour the past through XHacks."
   },
   {
     question: "Where is the venue?",
     answer:
-      "DreamHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
+      "XHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
   },
   {
     question: "What is a hackathon?",
     answer:
-      "A hackathon is an event where teams of 2-4 develop (or “hack”) a project in a short period of time. Hackathons are often 24 hours or a weekend, but SystemsHacks is 12 hours to make the experience less imposing for beginners. Hackathons are an opportunity to experiment with new tools, or try new ideas. They are also a great change to make lasting connections with fellow students, mentors, and industry professionals.",
+      "A hackathon is an event where teams of 2-4 develop (or “hack”) a project in a short period of time. Hackathons are an opportunity to experiment with new tools, or try new ideas. They are also a great change to make lasting connections with fellow students, mentors, and industry professionals.",
   },
   {
     question: "How can I best participate with no hackathon experience?",
@@ -22,7 +22,7 @@ const faqsJson = [
   {
     question: "How should the theme be integrated into my project?",
     answer:
-      "The theme can be incorporated into your project however you see fit! DreamHacks was chosen so you, the hackers, could let your imaginations run wild. If you wanted to create a project to help achieve your dreams, great! If you wanted to create the project of your dreams, that also works too! In the end, it is fully up to you on how you want to work the theme into your work. Think of the theme as simply a prompt to help you get started."
+      "The theme can be incorporated into your project however you see fit! “The Past” can be anything from recent memories to ancient history. You can use it to drive your project functionality, such as a digital photobooth or an interactive museum, or use it to inspire your design like a throwback from the 90s. It is fully up to you how you interpret the theme into your work. Think of the theme as simply a prompt to help you get started. Use the past as a foundation to build something new!"
     },
   {
     question: "How can I register my team?",
@@ -46,18 +46,6 @@ var chevronImg = document.createElement("img");
 chevronImg.setAttribute("src", "./assets/images/icons/chevron-down.svg");
 chevronImg.setAttribute("alt", "Chevron");
 chevronImg.width = 20;
-
-// reusing a random asset that already exists, could be changed later
-var faqIcon = document.createElement("img");
-faqIcon.setAttribute("src", "./assets/images/about_star.webp");
-faqIcon.setAttribute("alt", "faq icon");
-
-const getRandomRotation = () => {
-  // makes the faq section a little bit less boring by rotating the icon
-  // uses hardcoded values because pure randomness looks bad
-  const rotations = [30, 90, 270]; 
-  return rotations[Math.floor(Math.random() * rotations.length)];
-};
 
 // generates an html element that contains one faq 
 // this includes an icon, then the question, and the answer
@@ -83,9 +71,35 @@ const toHtml = (faq, index) => {
   contentParagraph.classList.add("content");
   contentParagraph.textContent = faq.answer;
 
-  // Apply random rotation to the faqIcon
-  var rotatedFaqIcon = faqIcon.cloneNode();
-  rotatedFaqIcon.style.transform = `rotate(${getRandomRotation()}deg)`;
+  // Creating a container for the candle icons
+  var faqIconContainer = document.createElement("div");
+  faqIconContainer.classList.add("faq-icon-container");
+
+  // Create a candle off icon which is visible by default
+  var faqIconOff = document.createElement("img");
+  faqIconOff.setAttribute("src", "./assets/images/faq_candle_off.svg");
+  faqIconOff.setAttribute("alt", "FAQ Icon Candle Off");
+  faqIconOff.classList.add("faq-candle-icon", "candle-off");
+
+  // Create a candle on icon which is visible on checkbox expansion
+  var faqIconOn = document.createElement("img");
+  faqIconOn.setAttribute("src", "./assets/images/faq_candle_on.svg");
+  faqIconOn.setAttribute("alt", "FAQ Icon Candle On");
+  faqIconOn.classList.add("faq-candle-icon", "candle-on");
+  faqIconOn.style.display = "none";
+
+  faqIconContainer.appendChild(faqIconOff);
+  faqIconContainer.appendChild(faqIconOn);
+
+  checkboxInput.addEventListener("change", function() {
+    if(this.checked){
+      faqIconOff.style.display = "none";
+      faqIconOn.style.display = "block";
+    }else{
+      faqIconOff.style.display = "block";
+      faqIconOn.style.display = "none";
+    }
+  });
 
   // Append all elements to the main container
   var faqItem = document.createElement("div");
@@ -94,7 +108,7 @@ const toHtml = (faq, index) => {
   faqItem.appendChild(checkboxInput);
   faqItem.appendChild(label);
   faqItem.appendChild(contentParagraph);
-  faqItem.appendChild(rotatedFaqIcon);
+  faqItem.appendChild(faqIconContainer);
 
   return faqItem;
 };
