@@ -35,6 +35,10 @@
 
   img {
     width: 6rem;
+    transition: filter 0.25s ease-in-out;
+    &:hover {
+      transform: scale(1.1);    
+    }
   }
 
   .list {
@@ -57,7 +61,7 @@
         transition: color $transition-speed-fast ease;
 
         &:hover {
-          color: $color-text-heading-fallback;
+          color: $color-text-heading;
         }
       }
 

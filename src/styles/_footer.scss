@@ -1,7 +1,7 @@
 @import 'tokens.scss';
 
 .footer {
-  background: $color-background-footer;
+  
   
   .container {
     text-align: center;
@@ -9,16 +9,35 @@
     padding-bottom: 5rem;
   
   
-    // Seb image
+    // Hourglass image container
     & > img {
-      max-width: 15rem;
+      max-width: 12rem;
       width: 100%;
       margin: auto;
+      margin-top: 2rem;
       margin-bottom: 3rem;
+      position:relative;
+      z-index: 1;
     }
-  
+    // Ellipse blur behind hourglass
+    position:relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 25rem;
+      height: 25rem;
+      left: 50%;
+      transform:translateX(-50%);
+      top: 3.2rem;
+      background: $color-hourglass-bg;
+      filter:blur(35px);
+      z-index: 0;
+      border-radius: 50%;
+    }
     & > div {
-      // SSSS logo 
+      position:relative;
+      z-index: 1;
+      
       & > img {
         width: 75%;
         max-width: 21.25rem;
