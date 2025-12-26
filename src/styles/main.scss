@@ -1,4 +1,5 @@
-@use 'tokens.scss';
+@use 'fonts.scss';
+@use 'tokens.scss' as *;
 @use 'layout.scss';
 @use 'button.scss';
 @use 'the-past.scss';
@@ -11,9 +12,6 @@
 @use 'team-section';
 @use 'background-canvas.scss';
 @use 'handbook.scss';
-
-@import 'tokens.scss';
-
 
 /*
   CSS Resest by Josh Comeau

@@ -1,5 +1,5 @@
-@import 'layout.scss';
-@import 'tokens.scss';
+@use 'tokens' as *;
+@use "layout";
 
 .the-past {
   h2 {

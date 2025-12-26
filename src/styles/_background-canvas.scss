@@ -1,4 +1,4 @@
-@import "./tokens.scss";
+@use "tokens" as *;
 
 .background-canvas {
     position: fixed !important; // override styling in main.scss

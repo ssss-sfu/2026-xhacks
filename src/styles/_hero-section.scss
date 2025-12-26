@@ -1,5 +1,5 @@
-@import "./hero-anim.scss";
-@import "./tokens.scss";
+@use "tokens" as *;
+@use "./hero-anim";
 
 #intro-image-section {
   display: flex;

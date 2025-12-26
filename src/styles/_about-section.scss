@@ -1,5 +1,5 @@
-@import "./tokens.scss";
-@import "./about-anim.scss";
+@use "tokens" as *;
+@use "about-anim";
 
 #about-section,
 #ssss-section {

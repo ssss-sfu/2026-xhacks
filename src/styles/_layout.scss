@@ -1,4 +1,4 @@
-@import 'tokens.scss';
+@use "tokens" as *;
 
 html {
   //background: $color-background;

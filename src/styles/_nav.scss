@@ -1,4 +1,4 @@
-@import "_tokens.scss";
+@use "tokens" as *;
 
 .header {
   display: flex;

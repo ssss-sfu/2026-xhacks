@@ -1,5 +1,4 @@
-@import "_tokens.scss";
-
+@use "tokens" as *;
 
 #team {
   #exec-list {

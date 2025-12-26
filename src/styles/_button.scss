@@ -1,4 +1,4 @@
-@import 'tokens.scss';
+@use "tokens" as *;
 
 .btn {
   background: $color-background-button;
