@@ -1,22 +1,40 @@
 @use "tokens" as *;
 
 #handbook {
-    section {
-        max-width: 1200px;
-    }
+  section {
+    max-width: 1200px;
+  }
 
-    h2 {
-        margin-bottom: 1rem;
-    }
+  h2 {
+    margin-bottom: 1rem;
+  }
+  h3{
+    font-size:2.1rem;
+  }
 
+  #hero-section h2 {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  @include viewport(mobile) {
     #hero-section h2 {
-        text-align: center;
-        margin-top: 3rem;
+      margin-top: 8rem;
     }
+  }
 
-    @include viewport(mobile) {
-        #hero-section h2 {
-            margin-top: 8rem;
-        }
-    }
+  .award{
+    color: $color-text-heading;
+    font-weight:bold;
+  }
+
+  .code{
+    background-color: rgba(94, 92, 86, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    color: $color-text;
+  }
 }
