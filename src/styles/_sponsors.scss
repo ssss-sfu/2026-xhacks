@@ -42,17 +42,45 @@
     }
 
     grid-column: span 2;
+
+    // for blurry backgrounds to allow light mode image visibility
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    // converting dark logos to light logos
+    &[href*="ea.com"] img,
+    &[href*="csss"] img {
+      filter: invert(1);
+    }
   }
 
   .sponsor-mini-container {
     grid-column: span 2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); // Changed from 1fr to repeat(2, 1fr)
-    gap: 1rem;
+
+    display: flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    justify-content: center;
+
+    //grid-template-columns: repeat(2, 1fr); // Changed from 1fr to repeat(2, 1fr)
+    //gap: 1rem;
 
     .sponsor.mini {
-      grid-column: span 1;
+      flex: 0 1 calc(50% - 0.5rem);
       height: 8rem;
+
+      // making logos a little bigger
+      &[href*="stevespokebar"] img,
+      &[href*="crustncrunch"] img,
+      &[href*="csss"] img,
+      &[href*="gamedev"] img,
+      &[href*="fas"] img,
+      &[href*="sfuwics"] img,
+      &[href*="seess"] img,
+      &[href*="synexuslabs"] img {
+        transform: scale(1.3);
+      }
     }
   }
 
@@ -72,7 +100,7 @@
       grid-template-columns: repeat(3, 1fr);
       
       .sponsor.mini {
-        grid-column: span 1;
+        flex: 0 1 calc(33.333% - 0.67rem); // 3 columns on desktop
       }
     }
   }
