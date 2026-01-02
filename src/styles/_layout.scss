@@ -29,7 +29,7 @@ body{
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     font-weight: 600;
-    line-height: 100%;
+    line-height: 110%; // hack to fix tall letters from being cut off
   }
 
   h1 {
@@ -61,7 +61,7 @@ body{
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     font-weight: 600;
-    line-height: 100%;
+    line-height: 110%;
   }
 
   h1 {
