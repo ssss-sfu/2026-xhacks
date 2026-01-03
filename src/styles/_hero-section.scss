@@ -29,15 +29,20 @@
       z-index: 0;
     }
 
+    img {
+      max-width: 90%;
+      height: auto;
+    }
+
     @include viewport(mobile) {
       height: 55%;
     }
     @include viewport(tablet) {
-      height: 75%;
+      height: 65%;
     }
 
     @include viewport(desktop) {
-      height: 120%;
+      height: 100%;
     }
   }
 }

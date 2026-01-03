@@ -33,8 +33,9 @@
       position: relative;
       background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.1) 66.15%,
-        rgba(255, 255, 255, 0) 100%
+        rgba(231, 167, 51, 0.25) 0%,
+        rgba(231, 167, 51, 0.2) 50%,
+        rgba(231, 167, 51, 0) 100%
       );
       border-radius: 2rem;
       width: fit-content;
@@ -61,9 +62,9 @@
 
         img {
           transform: rotate(-90deg);
-          filter: saturate(0) brightness(2);
-          transition: all 0.25s;
+          transition: transform 0.25s;
           width: 1em;
+          content: url('./assets/images/icons/chevron-down2.svg');
         }
       }
 
@@ -84,8 +85,8 @@
         }
 
         & ~ label img {
-          filter: saturate(1);
           transform: rotate(0deg);
+          content: url('./assets/images/icons/chevron-down.svg');
         }
 
         & ~ .content {
