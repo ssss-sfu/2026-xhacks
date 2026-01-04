@@ -1,5 +1,10 @@
 const faqsJson = [
   {
+    question: "What is a hackathon?",
+    answer:
+      "A hackathon is an event where teams of 2-4 develop (or “hack”) a project in a short period of time. Hackathons are an opportunity to experiment with new tools, or try new ideas. They are also a great change to make lasting connections with fellow students, mentors, and industry professionals.",
+  },
+  {
     question: "Why XHacks?",
     answer: 
       "The past is more than just memory. Without it, there is no foundation for the future. At XHacks 2026, we invite hackers to bridge the gap between the past, present, and future. Whether you are rebuilding old technology with modern stacks, reviving lost stories, or creating retro-futuristic interfaces, this is your chance to connect with history and grow further to build the future. We will travel back in time to draw inspiration from our roots and honour the past through XHacks."
@@ -10,9 +15,9 @@ const faqsJson = [
       "XHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
   },
   {
-    question: "What is a hackathon?",
+    question: "What kind of projects can I build?",
     answer:
-      "A hackathon is an event where teams of 2-4 develop (or “hack”) a project in a short period of time. Hackathons are an opportunity to experiment with new tools, or try new ideas. They are also a great change to make lasting connections with fellow students, mentors, and industry professionals.",
+      "You can build anything you’d like! Projects can be software, hardware, or a combination of both. Creativity is highly encouraged! Whether you’re making an app, a game, a tool, or an experimental prototype."
   },
   {
     question: "How can I best participate with no hackathon experience?",
@@ -23,7 +28,12 @@ const faqsJson = [
     question: "How should the theme be integrated into my project?",
     answer:
       "The theme can be incorporated into your project however you see fit! “The Past” can be anything from recent memories to ancient history. You can use it to drive your project functionality, such as a digital photobooth or an interactive museum, or use it to inspire your design like a throwback from the 90s. It is fully up to you how you interpret the theme into your work. Think of the theme as simply a prompt to help you get started. Use the past as a foundation to build something new!"
-    },
+  },
+  {
+    question: "Who can apply?",
+    answer:
+      "XHacks is open to currently enrolled university students. Hackers of all experience levels are welcome, but first-time hackers will be given priority during the application process. If this is your first hackathon, we highly encourage you to apply!"
+  },
   {
     question: "How can I register my team?",
     answer:
