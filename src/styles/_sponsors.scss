@@ -76,9 +76,11 @@
       &[href*="csss"] img,
       &[href*="gamedev"] img,
       &[href*="fas"] img,
-      &[href*="seess"] img,
       &[href*="synexuslabs"] img {
         transform: scale(1.3);
+      }
+      &[href*="seess"] img{
+        transform:scale(2.0);
       }
     }
   }
