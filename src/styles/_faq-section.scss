@@ -22,7 +22,7 @@
 
   .list {
     display: grid;
-    gap: 2rem;
+    gap: 40px;
     margin-top: 2.75rem;
 
     @include viewport(desktop) {
